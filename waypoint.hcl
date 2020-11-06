@@ -2,16 +2,16 @@ project = "hello-world"
 
 app "hello-world" {
   labels = {
-      "service" = "hello-world",
+      "service" = "hello-world"
   }
 
   build {
-    use "pack" {}
+    use "docker" {}
     registry {
         use "docker" {
-          image = "hello-world"
-          tag = "1"
-          encoded_auth = filebase64("/Users/aika/Devops/way-hello/dockerAuth.json")
+          image = "birnazarova/hello-world"
+          tag = "v2"
+          encoded_auth = filebase64("/Users/aika/Devops/way-hello1/dockerAuth.json")
         }
     }
  }
